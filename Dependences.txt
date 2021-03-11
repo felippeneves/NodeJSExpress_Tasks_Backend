@@ -1,0 +1,17 @@
+//Parte Web/Global
+npm i -s express body-parser cors consign
+
+//Parte de segurança
+npm i -s bcrypt-nodejs jwt-simple passport passport-jwt
+
+//Parte de banco de dados
+npm i -s knex pg
+
+//Manipulação de data
+npm i -s moment
+
+//Laucher em DEV
+npm i --save-dev nodemon
+
+//Laucher em PRD
+npm i --save pm2
