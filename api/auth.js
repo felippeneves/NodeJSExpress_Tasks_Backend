@@ -16,7 +16,7 @@ module.exports = app => {
         if(user) {
             bcrypt.compare(req.body.password, user.password, (err, isMatch) => {
                 if(err || !isMatch) {
-                    return res.status(401).send('Senha incorreta')
+                    return res.status(401).send('A senha informada é inválida!')
                 }
 
                 const payload = { id: user.id }
@@ -27,7 +27,7 @@ module.exports = app => {
                 })
             })
         } else {
-            res.status(400).send('Usuário não cadastrado')
+            res.status(400).send('Usuário não cadastrado!')
         }
     }
 
